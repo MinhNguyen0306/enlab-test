@@ -1,0 +1,33 @@
+@use "../../scss/" as *;
+
+.global-loading {
+    position: fixed;
+    pointer-events: none;
+
+    @include flex(column, center, center);
+    @include gradient;
+
+    &__content {
+        @include flex(column, center, center);
+        gap: 2rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        color: $white;
+    }
+
+    &__loading {
+        color: $error-color;
+        font-size: 4rem;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

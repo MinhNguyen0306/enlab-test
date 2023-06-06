@@ -1,0 +1,23 @@
+@use "../../../scss/" as *;
+
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+
+    background-image: url("../../../assets/Background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    @include flex(column, unset, unset);
+    
+    
+    &__content {
+        width: 90%;
+        height: auto;
+        margin-top: $header-height;
+        padding: 1.5rem;
+        
+        @include flex(row, unset, unset);
+    }
+}

@@ -1,0 +1,43 @@
+@use "../../scss/" as *;
+
+.section {
+    width: 50%;
+    height: 550px;
+    margin: auto;
+    padding: 1.5rem 2rem;
+
+    background-color: $main-color;
+    backdrop-filter: blur(10px);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    @include flex(column, center, center);
+    row-gap: 2rem;
+
+    &__answers {
+        width: 80%;
+        height: max-content;
+        
+        @include flex(column, unset, unset);
+    }
+
+}
+
+.time-box {
+    width: 200px;
+    height: 200px;
+    border-radius: $border-radius;
+    color: $white;
+    background-color: $main-color;
+    box-shadow: $box-shadow;
+
+    @include flex(unset, center, center);
+}
+
+.error_text {
+    color: $error-color;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+

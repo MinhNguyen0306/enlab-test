@@ -1,0 +1,46 @@
+@use "../../scss/" as *;
+
+.modal {
+    width: max-content;
+    height: max-content;
+    background-color: $white;
+    border-radius: $border-radius;
+
+    &__container {
+        @include flex(column, unset, center);
+
+        &__title {
+            font-size: large;
+            font-weight: 600;
+            color: $main-color;
+            text-align: center;
+            padding: 1rem 15px;
+            border-bottom: 1px solid $main-color;
+        }
+
+        &__button {
+            @include flex(row, space-between, center);
+            gap: 2rem;
+            padding: 1rem 15px;
+            
+            &.btn-cancel {
+                flex: 1;
+                padding: .5rem 1rem;
+                font-weight: 500;
+                color: $white;
+                background-color: $error-color;
+                border-radius: $border-radius;
+            }
+            
+            &.btn-confirm {
+                flex: 1;
+                padding: .5rem 1rem;
+                font-weight: 500;
+                color: $white;
+                background-color: $correct-color;
+                border-radius: $border-radius;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,63 @@
+@use "../../scss/" as *;
+
+.item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    &__wrap {
+        padding: .5rem 1.5rem;
+        border: 3px solid white;
+        color: $white;
+        background-color: transparent;
+        border-radius: $border-radius;      
+
+        @include flex(row, flex-start, center);
+    }
+
+    &__option {
+        width: 30px;
+        height: 30px;
+        
+        padding: 5px;
+        margin-right: 20px;
+
+        border: 1px solid $white;
+        border-radius: 100%;
+
+        @include flex(column, center, center);
+    }
+
+    &.choose {
+        background-color: $second-color;
+        border-radius: $border-radius;
+    }
+
+    &:hover {
+        background-color: $second-color;
+        border-radius: $border-radius;
+    }
+}
+
+.correct {
+    background-color: $correct-color;
+    animation: animate .4s linear infinite;
+    animation-delay: 1s;
+}
+
+.error {
+    background-color: red;
+}
+
+@keyframes animate {
+    0% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: $correct-color;
+    }
+}

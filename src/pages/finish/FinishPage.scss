@@ -1,0 +1,42 @@
+@use "../../scss/" as *;
+
+.finish-section {
+    width: 400px;
+    height: 400px;
+    padding: 2rem;
+    margin: calc((100vh - $header-height - 400px - 4rem) / 2) auto auto auto;
+
+    background-color: $main-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    color: $white;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+
+        @include flex(column, space-between, center);
+    }
+
+    &__header {
+        @include flex(column, center, center);
+    }
+    
+    &__content {
+        @include flex(column, space-between, center);
+        gap: 1.5rem;
+    }
+
+    &__logo {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 5px;
+
+        border-radius: 100%;
+    }
+
+    // span {
+    //     color: red;
+    //     text-align: center;
+    // }
+}

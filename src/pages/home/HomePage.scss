@@ -1,0 +1,18 @@
+@use "../../scss/" as *;
+
+.home_section {
+    width: 100%;
+    height: auto;
+    gap: 2.5rem;
+
+    @include flex(column, center, center)
+
+
+}
+
+.timeline {
+    color: $white;
+    font-size: x-large;
+    font-weight: 600;
+
+}

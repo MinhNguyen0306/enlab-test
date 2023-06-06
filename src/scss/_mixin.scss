@@ -1,0 +1,23 @@
+@mixin flex ($direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+} 
+
+@mixin overlay {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1000;
+    background-color: rgba($color: (#000000), $alpha: 0.5);
+}
+
+@mixin gradient {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1000;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(41,41,41,1) 44%);
+}
